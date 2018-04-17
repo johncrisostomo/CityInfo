@@ -12,10 +12,7 @@ namespace CityInfo.API.Controllers
         [HttpGet()]
         public JsonResult GetCities()
         {
-            return new JsonResult(new List<object> {
-                new { Id=1, Name="New York City" },
-                new { Id=2, Name="Antwerp" }
-            });
+            return new JsonResult(CitiesDataStore.Current.Cities);
         }
     }
 }
