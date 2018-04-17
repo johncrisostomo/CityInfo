@@ -8,6 +8,12 @@ namespace CityInfo.API.Controllers
 {
     public class CitiesController : Controller
     {
-
+        public JsonResult GetCities()
+        {
+            return new JsonResult(new List<object> {
+                new { Id=1, Name="New York City" },
+                new { Id=2, Name="Antwerp" }
+            });
+        }
     }
 }
