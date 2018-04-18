@@ -155,6 +155,13 @@ namespace CityInfo.API.Controllers
 
             patchDocument.ApplyTo(pointOfInterestToPatch, ModelState);
 
+            if (pointOfInterestToPatch.Name == pointOfInterestToPatch.Description)
+            {
+                ModelState.AddModelError("Description", "The provided description should be different from the name");
+            }
+
+            TryValidateModel(pointOfInterestToPatch);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
