@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
 using CityInfo.API.Services;
 using Microsoft.Extensions.Configuration;
+using CityInfo.API.Entities;
 
 namespace CityInfo.API
 {
@@ -47,6 +48,8 @@ namespace CityInfo.API
 #else
             services.AddTransient<IMailService, CloudMailService>();
 #endif
+
+            services.AddDbContext<CityInfoContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
