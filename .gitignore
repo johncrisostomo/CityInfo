@@ -26,7 +26,7 @@ autom4te.cache/
 *.tar.gz
 tarballs/
 test-results/
-Thumbs.db
+*.db
 .vs/
 
 # Mac bundle stuff
