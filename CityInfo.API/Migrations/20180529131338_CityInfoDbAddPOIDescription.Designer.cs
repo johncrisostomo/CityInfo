@@ -10,9 +10,10 @@ using System;
 namespace CityInfo.API.Migrations
 {
     [DbContext(typeof(CityInfoContext))]
-    partial class CityInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20180529131338_CityInfoDbAddPOIDescription")]
+    partial class CityInfoDbAddPOIDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
